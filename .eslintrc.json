@@ -24,6 +24,7 @@
             "unix"
         ],
         "quotes": [
+            2,
             "single"
         ],
         "semi": [
