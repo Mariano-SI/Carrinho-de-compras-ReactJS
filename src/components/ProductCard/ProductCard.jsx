@@ -4,6 +4,7 @@ import propTypes from 'prop-types';
 import { BsCartPlusFill } from 'react-icons/bs';
 import formatCurrency from '../../utils/formatCurrency';
 
+
 function ProductCard({product}) {
   const {thumbnail, price, title} = product;
   return (
