@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Cart.css';
 import CartItem from '../CartItem/CartItem';
+import GlobalContext from '../../context/GlobalContext';
+import formatCurrency from '../../utils/formatCurrency';
 
 function Cart() {
+  const {cartProducts, isCartVisible} = useContext(GlobalContext);
+
+  const totalPrice = cartProducts.reduce((acc, cartProduct)=>{
+    return acc += cartProduct.price;
+  }, 0);
+
   return (
-    <section className="cart">
+    <section className={`cart ${isCartVisible && 'cartActive'}`}>
       <div className="cartItems">
-        <CartItem/>
+        {cartProducts.map((cartProduct)=>(
+          <CartItem key={cartProduct.id} productInfo={cartProduct}/>
+        ))}
       </div>
       <div className="cartResume">
-        resmo do carrinho
+        {formatCurrency(totalPrice, 'BRL')}
       </div>
     </section>
   );

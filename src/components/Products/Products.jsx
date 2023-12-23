@@ -10,7 +10,7 @@ function Products() {
   const {products, setProducts, loading, setLoading} = useContext(GlobalContext);
 
   async function getProducts(){
-    const products = await fetchProducts('iphone');
+    const products = await fetchProducts('xbox');
     setProducts(products);
     setLoading(false);
   }
@@ -20,9 +20,9 @@ function Products() {
   }, []);
 
   function decideContent(){
-    if(loading){
+    if(loading || products.length === 0){
       return(
-        [...Array(9)].map((_, i) => <ProductCardSkeleton key={i}/>)
+        [...Array(20)].map((_, i) => <ProductCardSkeleton key={i}/>)
       );
     }
     return(
@@ -34,7 +34,6 @@ function Products() {
 
   return (
     <section  className="products container">
-      {name}
       {decideContent()}
     </section>
   );

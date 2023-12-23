@@ -7,17 +7,16 @@ import GlobalContext from '../../context/GlobalContext';
 function SearchBar() {
 
   const [searchTerm, setSearchTerm] = useState('');
-  const {setProducts, setLoading} = useContext(GlobalContext);
+  const {setProducts} = useContext(GlobalContext);
 
   async function handleSubmit(e){
-    setLoading(true);
+    setProducts([]);
     e.preventDefault();
     const products = await fetchProducts(searchTerm);
     setProducts(products);
-
-    setLoading(false);
     setSearchTerm('');
   }
+
   return (
     <form className="searchBar" onSubmit={handleSubmit}>
       <input
