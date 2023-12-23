@@ -3,7 +3,7 @@
 Este é um projeto criado com o objetivo de praticar os conceitos do ReactJS. A aplicação utiliza a API do Mercado Livre e sua interface foi baseada na original do Meli. 
 
 Através da aplicação, é possível pesquisar por produtos disponíveis na API do Mercado Livre e adicioná-los ao carrinho de compras.
-
+![Página dos Produtos](https://github.com/Mariano-SI/Mini-Mercado-Livre-ReactJS/blob/master/images/meli1.png?raw=true)
 ## Como executar o projeto
 
 Para executar o projeto, siga os seguintes passos:
@@ -22,3 +22,7 @@ No futuro, pretendo implementar as seguintes melhorias no projeto:
 - Criar mais páginas utilizando um esquema de roteamento;
 - Integrar a aplicação com uma API que possua esquema de autenticação;
 - Implementar um sistema de roteamento público/privado no front-end.
+  
+## Imagens do projeto
+
+![Página dos Produtos](https://github.com/Mariano-SI/Mini-Mercado-Livre-ReactJS/blob/master/images/Mel2.png?raw=true)
